@@ -1,0 +1,100 @@
+// https://leetcode.com/problems/decrypt-string-from-alphabet-to-integer-mapping/
+class Solution {
+    public String freqAlphabets(String a) {
+        String temp="";
+	String b="";
+	String[] c=new String[a.length()];
+	for(int i=0;i<a.length();i++){
+	  if(a.charAt(i)=='#'){
+	      c[i-2]=a.charAt(i-2)+""+a.charAt(i-1);
+	      c[i-1]=null;
+	  }
+	  else{
+	      c[i]=a.charAt(i)+"";
+	  }
+	}
+	for(int j=0;j<c.length;j++){
+	    if(c[j]==null){
+	        continue;
+	    }
+	    else if(c[j].equals("1")){
+	        temp+="a";
+	    }
+	    else if(c[j].equals("2")){
+	         temp+="b";
+	    }
+	    else if(c[j].equals("3")){
+	         temp+="c";
+	    }
+	    else if(c[j].equals("4")){
+	         temp+="d";
+	    }
+	    else if(c[j].equals("5")){
+	         temp+="e";
+	    }else if(c[j].equals("6")){
+	         temp+="f";
+	    }
+	    else if(c[j].equals("7")){
+	         temp+="g";
+	    }
+	    else if(c[j].equals("8")){
+	         temp+="h";
+	    }else if(c[j].equals("9")){
+	         temp+="i";
+	    }
+	    else if(c[j].equals("10")){
+	         temp+="j";
+	    }
+	    else if(c[j].equals("11")){
+	         temp+="k";
+	    }
+	    else if(c[j].equals("12")){
+	         temp+="l";
+	    }
+	    else if(c[j].equals("13")){
+	         temp+="m";
+	    }
+	    else if(c[j].equals("14")){
+	         temp+="n";
+	    }
+	    else if(c[j].equals("15")){
+	         temp+="o";
+	    }
+	    else if(c[j].equals("16")){
+	         temp+="p";
+	    }
+	    else if(c[j].equals("17")){
+	         temp+="q";
+	    }
+	    else if(c[j].equals("18")){
+	         temp+="r";
+	    }
+	    else if(c[j].equals("19")){
+	         temp+="s";
+	    }
+	    else if(c[j].equals("20")){
+	         temp+="t";
+	    }
+	    else if(c[j].equals("21")){
+	         temp+="u";
+	    }
+	    else if(c[j].equals("22")){
+	         temp+="v";
+	    }
+	    else if(c[j].equals("23")){
+	         temp+="w";
+	    }
+	    else if(c[j].equals("24")){
+	         temp+="x";
+	    }
+	    else if(c[j].equals("25")){
+	         temp+="y";
+	    }
+	    else{
+	         temp+="z";
+	    }
+	}
+    return temp;
+        
+    }
+}
