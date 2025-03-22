@@ -1,0 +1,19 @@
+//https://leetcode.com/problems/reverse-words-in-a-string-iii/
+class Solution {
+    public String reverseWords(String s) {
+    String d="";
+     
+    String f="";
+    for(int i=s.length()-1;i>=0;i--){
+        d+=s.charAt(i);
+    }
+    String[] a=d.split(" ");
+    for(int i=a.length-1;i>=0;i--){
+        f+=a[i];
+        if(i!=0){
+            f+=" ";
+        }
+    }
+    return f;
+    }
+}
