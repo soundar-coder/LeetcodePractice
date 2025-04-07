@@ -1,0 +1,27 @@
+//https://leetcode.com/problems/reverse-words-in-a-string/description/?envType=study-plan-v2&envId=leetcode-75
+
+class Solution {
+    public String reverseWords(String s) {
+  String a="";
+  s=s.trim();
+  a+=s.charAt(0);
+  for(int i=1;i<s.length();i++){
+      if(s.charAt(i)==' ' && s.charAt(i-1)==' '){
+          a+="";
+      }
+  else{
+      a+=s.charAt(i);
+  }
+  
+  	}
+  	String[] d=a.split(" ");
+  	String e="";
+  	for(int i=d.length-1;i>=0;i--){
+  	    e+=d[i];
+  	   
+  	    e+=" ";
+  	}
+  	e=e.trim();
+  	return e;
+    }
+}
